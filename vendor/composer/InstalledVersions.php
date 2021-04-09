@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7486e5e53ab1352bda665d526b29df75c840e48b',
+    'reference' => '39357966c43c016f160a019fbd935f53c6ea3fa8',
     'name' => 'robertbyrnes/templateengine',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7486e5e53ab1352bda665d526b29df75c840e48b',
+      'reference' => '39357966c43c016f160a019fbd935f53c6ea3fa8',
     ),
   ),
 );
@@ -267,7 +267,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

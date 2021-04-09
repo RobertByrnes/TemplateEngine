@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0bcc2b68b5280051c5f58286be400919
 {
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/classes',
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -13,6 +17,7 @@ class ComposerStaticInit0bcc2b68b5280051c5f58286be400919
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->fallbackDirsPsr4 = ComposerStaticInit0bcc2b68b5280051c5f58286be400919::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit0bcc2b68b5280051c5f58286be400919::$classMap;
 
         }, null, ClassLoader::class);
