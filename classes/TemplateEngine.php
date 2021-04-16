@@ -8,7 +8,7 @@ Class TemplateEngine
 
     public function __construct()
     {
-        if (preg_match('/wamp|repositories/', $_SERVER['DOCUMENT_ROOT']))
+        if (preg_match('/wamp|repositories/', realpath(__FILE__)))
         {
             SELF::$smarty = new Smarty();
             SELF::$smarty->setTemplateDir($_SERVER['DOCUMENT_ROOT'].'/templates/');
